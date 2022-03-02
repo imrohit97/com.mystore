@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- test name="LaunchBrowserTest" preserve-order="true"> <parameter name="TestName" 
+		value="TestCase_1" /> <parameter name="BrowserName" value="firefox" /> <classes> 
+		<class name="com.myStore.TestCases.LaunchBrowserTest" /> </classes> </test> 
+		<test name="OrderJourneyTest" preserve-order="true"> <parameter name="testName" 
+		value="TestCase01" /> <parameter name="BrowserName" value="edge" /> <classes> 
+		<class name="com.myStore.TestCases.OrderJourneyTest" /> </classes> </test> -->
+	<!-- Test -->
+	<test name="Test-1" preserve-order="true">
+		<parameter name="BrowserName" value="edge" />
+		<classes>
+
+			<class name="com.myStore.TestCases.CaseTest1" />
+
+		</classes>
+
+	</test>
+
+	<test name="Test-2" preserve-order="true">
+		<parameter name="BrowserName" value="firefox" />
+		<classes>
+			<class name="com.myStore.TestCases.CaseTest2" />
+		</classes>
+
+	</test>
+
+	<test name="Test-3" preserve-order="true">
+		<parameter name="testName" value="TestCase-03" />
+		<parameter name="BrowserName" value="chrome" />
+		<classes>
+
+			<class name="com.myStore.TestCases.LaunchBrowserTest"/>
+		</classes>
+	</test>
+
+
+</suite> <!-- Suite -->

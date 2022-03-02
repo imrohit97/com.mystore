@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 20.826 s <<< FAILURE! - in TestSuite
+Login(com.myStore.TestCases.LaunchBrowserTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.myStore.TestCases.LaunchBrowserTest.Login(LaunchBrowserTest.java:42)
+
+tearDown(com.myStore.TestCases.LaunchBrowserTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.myStore.TestCases.LaunchBrowserTest.tearDown(LaunchBrowserTest.java:34)
+

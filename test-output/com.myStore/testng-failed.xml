@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [com.myStore]">
+  <test thread-count="5" name="src.test.java(failed)">
+    <parameter name="browserName" value="firefox"/>
+    <parameter name="testID" value="FirstTest"/>
+    <classes>
+      <class name="com.myStore.TestCases.LaunchBrowserTest">
+        <methods>
+          <include name="SetUp"/>
+          <include name="tearDown"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- com.myStore.TestCases.LaunchBrowserTest -->
+    </classes>
+  </test> <!-- src.test.java(failed) -->
+</suite> <!-- Failed suite [com.myStore] -->
