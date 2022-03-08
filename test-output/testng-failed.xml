@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <parameter name="BrowserName" value="&quot;firefox&quot;"/>
-  <parameter name="testName" value="&quot;defaultTest&quot;"/>
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test-1(failed)">
+    <parameter name="BrowserName" value="edge"/>
     <classes>
-      <class name="com.myStore.TestCases.LaunchBrowserTest">
+      <class name="com.myStore.TestCases.CaseTest1">
         <methods>
-          <include name="Validate" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="test1" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.myStore.TestCases.LaunchBrowserTest -->
+      </class> <!-- com.myStore.TestCases.CaseTest1 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test-1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

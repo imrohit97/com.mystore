@@ -1,17 +1,13 @@
 package com.myStore.TestCases;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.myStore.Utlities.ActionClass;
 import com.myStore.Utlities.MainClass;
+
+import _Reporting.ExtentReporting;
+import _Reporting.MainReporting;
 
 public class LaunchBrowserTest extends MainClass {
 	 /*
@@ -23,6 +19,7 @@ public class LaunchBrowserTest extends MainClass {
 	@Test
 	public void Validate(@Optional("defaultTest")String testName,@Optional("firefox")String browser) throws InterruptedException {
 		System.out.println(testName+"  "+browser);	
+		MainReporting.CreateTest(testName);
 		intializeBrowser(browser);
 		Thread.sleep(4000);
 //		Actions action=new Actions(driver);
@@ -40,5 +37,7 @@ public class LaunchBrowserTest extends MainClass {
 //		Thread.sleep(1000);
 		System.out.println("Test Completed");
 		driver.quit();
+		ExtentReporting.log("test case is  completed");
+		ExtentReporting.flush();
 	}
 }
