@@ -12,16 +12,13 @@ public class ManageBrowser extends MainClass{
 	static String projectpath = System.getProperty("user.dir");
 
 	public static WebDriver manageBrowser(String BrowserName) {
-		
-		try {
 		if (BrowserName.equalsIgnoreCase("Chrome")) {
 			try {
 				System.setProperty("webdriver.chrome.driver", projectpath+"/src/main/java/Drivers/chromedriver.exe");
 				driver = new ChromeDriver();
 			}catch (Exception e) {
 				System.out.println("Failed to load ChromeDiver");
-		}
-				
+				}
 		}
 		else if(BrowserName.equalsIgnoreCase("firefox")) {
 			try {
@@ -42,13 +39,16 @@ public class ManageBrowser extends MainClass{
 		}
 		else
 		{
+			try {
+				
 			System.setProperty("webdriver.edge.driver",projectpath+"/src/main/java/Drivers/msedgedriver.exe");
 			driver=new EdgeDriver();
-		}
-		}catch(Exception e)  {
-			System.out.println("Failed to load Driver");
+			}catch(Exception e) {
+				System.out.println("Driver not intilaizeed");
 			
+			}
 		}
+	
 		return driver;	
 	}
 	

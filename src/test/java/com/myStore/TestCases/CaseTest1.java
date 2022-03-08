@@ -16,9 +16,9 @@ public class CaseTest1 extends MainClass {
 		super();
 	}
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	@Parameters({ "BrowserName" })
-	public void test1(String browser) {
+	public void test1(String browser) throws InterruptedException {
 		MainReporting.CreateTest("Test-01");
 		intializeBrowser(browser);
 		ExtentReporting.log("URL is Launched");

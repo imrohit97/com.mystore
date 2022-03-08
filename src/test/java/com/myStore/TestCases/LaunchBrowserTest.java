@@ -1,10 +1,12 @@
 package com.myStore.TestCases;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -12,11 +14,14 @@ import com.myStore.Utlities.ActionClass;
 import com.myStore.Utlities.MainClass;
 
 public class LaunchBrowserTest extends MainClass {
-	
-
-	@Test
+	 /*
+	  * 
+	  * Added  optional properties 
+	  */
+	//WebDriver driver;
 	@Parameters({"testName","BrowserName"})
-	public void Validate(String testName,String browser) throws InterruptedException {
+	@Test
+	public void Validate(@Optional("defaultTest")String testName,@Optional("firefox")String browser) throws InterruptedException {
 		System.out.println(testName+"  "+browser);	
 		intializeBrowser(browser);
 		Thread.sleep(4000);

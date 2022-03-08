@@ -16,8 +16,8 @@ public class Homepage_Objects {
 
 	public static String addTocart = "Add to cart";
 
-	public String proceedToCheckout = "//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span";
+	public static String proceedToCheckout = "//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span";
 
-	public String summerDress = "//*[@id=\"homefeatured\"]/li[6]/div/div[1]/div/a[1]/img";
+	public static String summerDress = "//*[@id=\"homefeatured\"]/li[6]/div/div[1]/div/a[1]/img";
 
 }
