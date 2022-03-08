@@ -26,7 +26,7 @@
 
 	</test>
 
-	<test name="Test-3" preserve-order="true">
+	<test name="Test-3"  preserve-order="true">
 		<parameter name="testName" value="TestCase-03" />
 		<parameter name="BrowserName" value="chrome" />
 		<classes>
@@ -34,6 +34,14 @@
 			<class name="com.myStore.TestCases.LaunchBrowserTest"/>
 		</classes>
 	</test>
+	
+	<test name="Test-4" preserve-order="true">
+	
+	<classes>
 
+			<class name="com.myStore.TestCases.HandleDropdowns"/>
+		</classes>
+		
+		</test>
 
 </suite> <!-- Suite -->
