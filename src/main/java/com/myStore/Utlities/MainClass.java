@@ -40,6 +40,7 @@ public class MainClass {
 		driver.get("http://automationpractice.com/index.php");
 		//driver.get("http://automationpractice.com/index.php");
 		ManageBrowser.WaitnMaximize(driver);
+		Thread.sleep(2000);
 		//String reach = driver.getCurrentUrl();
 
 	}
