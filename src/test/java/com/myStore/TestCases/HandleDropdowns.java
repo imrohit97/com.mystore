@@ -10,16 +10,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import _Reporting.ExtentReporting;
+import _Reporting.MainReporting;
+
 public class HandleDropdowns {
 	WebDriver driver;
 
 	@Test
 	public void test() throws InterruptedException {
 		String projectPath = System.getProperty("user.dir");
+		MainReporting.CreateTest("ManageDropdowns");
 		System.setProperty("webdriver.chrome.driver", projectPath+"/src/main/java/Drivers/chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.navigate().to("https://www.techlistic.com/p/selenium-practice-form.html");
 		driver.manage().window().maximize();
+		ExtentReporting.log("URL is loaded");
 		driver.manage().timeouts().pageLoadTimeout(10000, TimeUnit.SECONDS);
 		WebElement continents = driver.findElement(By.xpath("//select[@id='continents']"));
 		Select select=new Select(continents);
@@ -38,9 +43,12 @@ public class HandleDropdowns {
 		for(WebElement ele:selected){
 			System.out.println(ele.getText());
 			
-			
 	}
 		Thread.sleep(1000);
+		ExtentReporting.pass("Test Case is passed");
+		
 		driver.quit();	
+		
+		ExtentReporting.flush();
 	}
 }
